@@ -1,0 +1,135 @@
+.search-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+}
+.searchCol{
+  position: absolute;
+  z-index: 10;
+  top:0;
+  padding-top: 14%;
+}
+
+
+.dataResult{
+  margin-top: 5px;
+  width: 98%;
+  height: 50%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  opacity: .9;
+  border-radius: 3px;
+  
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+.dataItem p {
+  margin-left: 10px;
+}
+
+.dataResult a {
+  text-decoration: none;
+}
+
+.dataResult a:hover {
+  background-color: lightgray;
+}
+
+@media (min-width: 300px) and (max-width: 400px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 10%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 8%;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 7%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 6%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 6%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 991px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 5%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Styles for viewports with a width greater than 601px and less than or equal to 900px */
+  .searchCol{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    padding-top: 15%;
+  }
+}
+
+/* Default styling for the left column component */
+.left-column-component {
+  position: relative;
+}
+
+/* Media query for phone screens */
+@media only screen and (max-width: 600px) {
+  .left-column-component {
+      position: sticky;
+      bottom: 0;
+  }
+}
