@@ -9,7 +9,7 @@ const UnLikes = ({ post, setLikesCount }) => {
       userId: loginUser.id,
       postId: post.id
     }
-    const response = await fetch("http://localhost:3000/likes", {
+    const response = await fetch("https://quacker-api.onrender.com/likes", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"

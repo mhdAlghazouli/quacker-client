@@ -10,11 +10,11 @@ const SearchUserProfile = () => {
   
   const { id } = useParams()
   const [data, setData] = useState(undefined);
-  const { postsData, handleGetPosts } = usePostsFetch("http://localhost:3000/posts/" + id)
+  const { postsData, handleGetPosts } = usePostsFetch("https://quacker-api.onrender.com/posts/" + id)
   
   //get user fetch
   async function handleSubmit() {
-    const response = await fetch("http://localhost:3000/profile/" + id, {
+    const response = await fetch("https://quacker-api.onrender.com/profile/" + id, {
       method: "GET",
       
     })

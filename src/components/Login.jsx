@@ -21,7 +21,7 @@ const Login = () => {
       password: password
     }
 
-    const response = await fetch("http://localhost:3000/users", {
+    const response = await fetch("https://quacker-api.onrender.com/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

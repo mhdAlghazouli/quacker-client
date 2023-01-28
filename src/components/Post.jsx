@@ -55,7 +55,7 @@ export const Post = ({post, handleGetPosts})=>{
   //handle Delete
 async function handleDelete(id) {
   
-  const response = await fetch(`http://localhost:3000/posts/${id}`, {
+  const response = await fetch(`https://quacker-api.onrender.com/posts/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json"
@@ -73,7 +73,7 @@ async function handleEdit(){
     textContent: newTextContent,
     
   }
-  const response = await fetch ("http://localhost:3000/posts", {
+  const response = await fetch ("https://quacker-api.onrender.com/posts", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
@@ -134,7 +134,7 @@ async function handleEdit(){
             </Row>
             <Row className="mt-2 mb-2">
               <Col>
-              {post.image !== null ? <Card.Img src={`http://localhost:3000${post.image && post.image.split('').slice(6).join("")}`} /> : null}
+              {post.image !== null ? <Card.Img src={`https://quacker-api.onrender.com${post.image && post.image.split('').slice(6).join("")}`} /> : null}
               </Col>
             </Row>
             <Row className="mb-2">

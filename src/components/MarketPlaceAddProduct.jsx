@@ -30,7 +30,7 @@ const MarketPlaceAddProduct = () => {
     formData.append('contact', contact)
     formData.append('userId', loginUser.id)
 
-    const response = await fetch("http://localhost:3000/products", {
+    const response = await fetch("https://quacker-api.onrender.com/products", {
       method: "POST",
       body: formData
     });

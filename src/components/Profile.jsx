@@ -16,7 +16,7 @@ const Profile =  () => {
  
   //post profile fetch
   async function handleSubmit() {
-    await fetch("http://localhost:3000/profile", {
+    await fetch("https://quacker-api.onrender.com/profile", {
       method: "POST",
       headers : {
         "Content-Type": "application/json"
@@ -32,7 +32,7 @@ const Profile =  () => {
   // get followed fetch
   async function handleGetFollow() {
 
-    const response = await fetch("http://localhost:3000/follows/" + loginUser.id, {
+    const response = await fetch("https://quacker-api.onrender.com/follows/" + loginUser.id, {
       method: "GET",
     });
     const followRes = await response.json();
@@ -42,7 +42,7 @@ const Profile =  () => {
 
   // get posts fetch
   async function handleGetPosts() {
-    const response = await fetch("http://localhost:3000/posts/" + loginUser.id, {
+    const response = await fetch("https://quacker-api.onrender.com/posts/" + loginUser.id, {
       method: "GET",
     });
     const postsRes = await response.json();

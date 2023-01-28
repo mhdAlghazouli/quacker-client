@@ -10,7 +10,7 @@ const FollowProfilePost = ({post}) => {
             
           <Row className="mt-2 mb-2">
               <Col>
-              {post.image !== null ? <Card.Img src={`http://localhost:3000${post.image && post.image.split('').slice(6).join("")}`} /> : null}
+              {post.image !== null ? <Card.Img src={`https://quacker-api.onrender.com${post.image && post.image.split('').slice(6).join("")}`} /> : null}
               </Col>
             </Row>
             <Row className="mb-2">
