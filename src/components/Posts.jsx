@@ -22,7 +22,7 @@ const Posts = ({ data,setPostsData }) => {
     formData.append('textContent', textContent)
     formData.append('userId', data.data.id)
 
-    const response = await fetch("https://quacker-api.onrender.com/posts", {
+    const response = await fetch("ttps://quacker-api.onrender.com/posts", {
       method: "POST",
       
       

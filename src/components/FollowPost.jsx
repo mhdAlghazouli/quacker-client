@@ -27,7 +27,7 @@ const FollowPost = ({post}) => {
   }
 
   return ( 
-    <Card key={post.id} className="mb-2" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}> 
+    <Card key={post.id} className="mb-4" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}> 
               <Card.Body>
                 <Row>
                   <Col className="d-flex">
@@ -43,7 +43,7 @@ const FollowPost = ({post}) => {
                 </Row>
                 <Row className="mt-2 mb-2">
               <Col>
-              {post.image !== null  ? <Card.Img src={`https://quacker-api.onrender.com${post.image && post.image.split('').slice(6).join("")}`} /> : null}
+              {post.image !== null  ? <Card.Img src={`ttps://quacker-api.onrender.com${post.image && post.image.split('').slice(6).join("")}`} /> : null}
               </Col>
             </Row>
                 <Row>
@@ -86,6 +86,7 @@ const FollowPost = ({post}) => {
               </Col>
             </Row>
               </Card.Body>
+              
             </Card>
    );
 }

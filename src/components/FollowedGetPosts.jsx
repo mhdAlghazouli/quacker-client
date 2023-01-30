@@ -14,7 +14,7 @@ const FollowedGetPosts = ({ followSectionData }) => {
  
 
   return ( 
-    <div>
+    <div >
       {filteredFollowerData.map(followedData => followedData.followed.Posts.length === 0 ? null : 
             followedData.followed.Posts.map(post =>
             <FollowPost key={post.id} post={post}/>)

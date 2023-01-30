@@ -2,19 +2,19 @@ import { useState, useEffect } from "react";
 import Posts from "./Posts";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 import { Post } from "./Post";
 import LeftSection from "./LeftSection";
 import FollowSection from "./FollowSection";
 import FollowedGetPosts from "./FollowedGetPosts";
-import CellPhoneProfile from "./CellPhoneProfile";
-import { useMediaQuery } from 'react-responsive';
+import CellPhone from "./CellPhone";
 
-const Profile =  () => {
+const CellPhoneProfile = () => {
   const [data, setData]= useState(undefined);
   const [followSectionData, setFollowSectionData] = useState([]);
   const [postsData, setPostsData] = useState([]);
   const loginUser = JSON.parse(window.localStorage.getItem("UserContext"));
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+ 
   //post profile fetch
   async function handleSubmit() {
     await fetch("ttps://quacker-api.onrender.com/profile", {
@@ -68,33 +68,28 @@ const Profile =  () => {
 if(!data){
   return null;
 }
+  return ( 
+    <div>
+      <Container>
+        <Row>
+        <Col>
+            <Posts data={data} setPostsData={setPostsData} />
+            {postsData.map(post => (
+              
+              <Post key={post.id} post={post} handleGetPosts={handleGetPosts}/>
+              
+            ))}
+            <FollowedGetPosts followSectionData={followSectionData}/>
+          </Col>
+        </Row>
+      </Container>
+      <div className="mt-5">
 
-return ( 
-    <div> 
-      {isMobile ? (
-        
-        <CellPhoneProfile />
-      ) : <Row className="justify-content-md-between">
-      <Col xs lg="3">
-        <LeftSection />
-      </Col>
-      <Col md="6">
-        <Posts data={data} setPostsData={setPostsData} />
-        {postsData.map(post => (
-          
-          <Post key={post.id} post={post} handleGetPosts={handleGetPosts}/>
-          
-        ))}
-        <FollowedGetPosts followSectionData={followSectionData}/>
-      </Col>
-      <Col xs lg="3">
-        <FollowSection followSectionData={followSectionData} />
-      </Col>
-    </Row>
-    }
+        <CellPhone />
+      </div>
+      
     </div>
-
-  );
+   );
 }
-
-export default Profile;
+ 
+export default CellPhoneProfile;

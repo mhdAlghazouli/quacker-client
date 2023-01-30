@@ -17,7 +17,7 @@ const GetComment = ({ commentData, setCommentData, setCommentsCount }) => {
 
 
   async function handleDelete(id) {
-    const deleteResponse = await fetch(`https://quacker-api.onrender.com/comments/${id}`, {
+    const deleteResponse = await fetch(`ttps://quacker-api.onrender.com/comments/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -43,7 +43,7 @@ const GetComment = ({ commentData, setCommentData, setCommentsCount }) => {
       userId: comment.userId,
       postId: comment.postId
     }
-    const response = await fetch("https://quacker-api.onrender.com/comments", {
+    const response = await fetch("ttps://quacker-api.onrender.com/comments", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"
