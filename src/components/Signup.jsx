@@ -46,7 +46,7 @@ const Signup = () => {
     }
     else{
       
-      const response = await fetch("ttps://quacker-api.onrender.com/users/signup", {
+      const response = await fetch("https://quacker-api.onrender.com/users/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

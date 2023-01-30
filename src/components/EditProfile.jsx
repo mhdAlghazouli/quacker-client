@@ -36,7 +36,7 @@ const EditProfile = () => {
   }else if(updatedProfile.userName === updatedProfile.firstName){
     setSignupErrorsUn("username should be different than first name")
   }else{
-    const response = await fetch ("ttps://quacker-api.onrender.com/profile/" + loginUser.id, {
+    const response = await fetch ("https://quacker-api.onrender.com/profile/" + loginUser.id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json"

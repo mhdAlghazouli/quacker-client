@@ -17,7 +17,7 @@ const Follow = ({ data }) => {
         followedId: id
       }
      
-        const response = await fetch("ttps://quacker-api.onrender.com/follows", {
+        const response = await fetch("https://quacker-api.onrender.com/follows", {
           
           method: "POST",
           headers: {
@@ -50,7 +50,7 @@ const Follow = ({ data }) => {
           followerId : loginUser.id,
           followedId: id,
         }
-        const response = await fetch("ttps://quacker-api.onrender.com/follows", {
+        const response = await fetch("https://quacker-api.onrender.com/follows", {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json"

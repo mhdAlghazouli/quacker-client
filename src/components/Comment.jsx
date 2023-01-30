@@ -14,7 +14,7 @@ const Comment = ({ post, setIsCommentsWindowOpen, setCommentsCount, setCommentDa
       userId: loginUser.id,
       postId: postId
     }
-    const response = await fetch("ttps://quacker-api.onrender.com/comments", {
+    const response = await fetch("https://quacker-api.onrender.com/comments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

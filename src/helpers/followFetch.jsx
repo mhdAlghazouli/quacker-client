@@ -7,7 +7,7 @@ const useFollowFetch = () => {
   // get followed fetch
   async function handleGetFollow() {
     console.log("useFollow fetch")
-    const response = await fetch("ttps://quacker-api.onrender.com/follows", {
+    const response = await fetch("https://quacker-api.onrender.com/follows", {
       method: "GET",
     });
     const followRes = await response.json();

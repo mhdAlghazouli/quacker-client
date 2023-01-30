@@ -43,7 +43,7 @@ const FollowPost = ({post}) => {
                 </Row>
                 <Row className="mt-2 mb-2">
               <Col>
-              {post.image !== null  ? <Card.Img src={`ttps://quacker-api.onrender.com${post.image && post.image.split('').slice(6).join("")}`} /> : null}
+              {post.image !== null  ? <Card.Img src={`https://quacker-api.onrender.com${post.image && post.image.split('').slice(6).join("")}`} /> : null}
               </Col>
             </Row>
                 <Row>

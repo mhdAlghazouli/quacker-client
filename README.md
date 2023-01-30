@@ -9,7 +9,7 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [ttps://quacker-api.onrender.com](ttps://quacker-api.onrender.com) to view it in your browser.
+Open [https://quacker-api.onrender.com](https://quacker-api.onrender.com) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.

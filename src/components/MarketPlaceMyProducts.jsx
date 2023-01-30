@@ -17,7 +17,7 @@ const MarketPlaceMyProducts = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   async function getMyProducts() {
-    const response = await fetch("ttps://quacker-api.onrender.com/products/" + loginUser.id , {
+    const response = await fetch("https://quacker-api.onrender.com/products/" + loginUser.id , {
       method: "GET"
     })
     const myProductsRes = await response.json();
@@ -27,7 +27,7 @@ const MarketPlaceMyProducts = () => {
 
   async function handleDelete(product) {
   
-    const response = await fetch(`ttps://quacker-api.onrender.com/products/${product.id}`, {
+    const response = await fetch(`https://quacker-api.onrender.com/products/${product.id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json"
@@ -49,7 +49,7 @@ const MarketPlaceMyProducts = () => {
               {products && products.map(product => (
                 <Card key={product.id} style={{"width": "18rem", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}} className="mx-2 mb-4">
                   <Card.Header><b className="text-warning">{moment(product.createdAt).fromNow()}</b></Card.Header>
-                  <Image variant="top" src={`ttps://quacker-api.onrender.com${product.image && product.image.split('').slice(6).join("")}`} style={{"height":"18rem"}} fluid/>
+                  <Image variant="top" src={`https://quacker-api.onrender.com${product.image && product.image.split('').slice(6).join("")}`} style={{"height":"18rem"}} fluid/>
                   <ListGroup className="list-group-flush">
                     <ListGroup.Item ><b className="text-warning">title: </b>{product.title}</ListGroup.Item>
                     <ListGroup.Item><b className="text-warning">description: </b>{product.description}</ListGroup.Item>
@@ -73,7 +73,7 @@ const MarketPlaceMyProducts = () => {
         {products && products.map(product => (
           <Card key={product.id} style={{"width": "18rem", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}} className="mx-2 mb-2">
             <Card.Header><b className="text-warning">{moment(product.createdAt).fromNow()}</b></Card.Header>
-            <Image variant="top" src={`ttps://quacker-api.onrender.com${product.image && product.image.split('').slice(6).join("")}`} style={{"height":"18rem"}} fluid/>
+            <Image variant="top" src={`https://quacker-api.onrender.com${product.image && product.image.split('').slice(6).join("")}`} style={{"height":"18rem"}} fluid/>
             <ListGroup className="list-group-flush">
               <ListGroup.Item ><b className="text-warning">title: </b>{product.title}</ListGroup.Item>
               <ListGroup.Item><b className="text-warning">description: </b>{product.description}</ListGroup.Item>
