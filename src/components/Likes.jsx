@@ -27,7 +27,7 @@ const Likes = ({ post, setLikesCount }) => {
   
   return ( 
     <div>
-      <Button variant="warning" onClick={handlePostLike}>
+      <Button variant="warning" size="sm" onClick={handlePostLike}>
         <AiOutlineLike />
       </Button>
     </div>

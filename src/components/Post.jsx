@@ -88,7 +88,7 @@ async function handleEdit(){
   }
 }
 
-  return <Card  className="mb-2" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}>
+  return <Card  className="mb-5" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}>
           <Card.Body>
             <Row >
               
@@ -161,7 +161,7 @@ async function handleEdit(){
                     <UnLikes post={post} setLikesCount={setLikesCount}/>
                   </Col>
                   <Col>
-                    <Button variant="warning" onClick={toggleCommentsWindowOpen}>
+                    <Button size="sm" variant="warning" onClick={toggleCommentsWindowOpen}>
                       <AiOutlineComment />
                     </Button>
                   </Col>

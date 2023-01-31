@@ -40,7 +40,7 @@ const Layout = () => {
             
             
                   <Col className="d-flex justify-content-end align-items-center">
-                  <Image className="mx-3" src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg"  style={{"width": "20%","borderRadius": "50%" }} />
+                  <Image className="mx-4" src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg"  style={{"width": "20%","borderRadius": "50%" }} />
                     <b className="text-warning">{loginUser && loginUser.userName}</b>
                   </Col>
            

@@ -29,7 +29,7 @@ const UnLikes = ({ post, setLikesCount }) => {
 
   return ( 
     <div>
-      <Button variant="warning" onClick={handlePostUnLike}>
+      <Button variant="warning" size="sm" onClick={handlePostUnLike}>
         <AiOutlineDislike />
       </Button>
     </div>
