@@ -91,9 +91,7 @@ async function handleEdit(){
   return <Card  className="mb-5" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}>
           <Card.Body>
             <Row >
-              
-                
-                
+            
                 <Col md="7" className="d-flex">
                   <Image src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg" fluid style={{"width": "10%","borderRadius": "50%" }} />
                   <Card.Text className="d-flex px-3" style={{"textAlign": "start", "color": "#777"}}>
@@ -101,30 +99,22 @@ async function handleEdit(){
                     <br />
                     {moment(post.createdAt).fromNow()}
                   </Card.Text>
-                  
                 </Col>
 
-              
-              <Col md="5" className="d-flex justify-content-end align-items-start ">
-               
+                <Col md="5" className="d-flex justify-content-end align-items-start ">
+                  <Button className="mx-4" size="sm" variant="warning" value={post.id} onClick={toggleShowIconsWindowOpen}>
+                    <RxDotsHorizontal />
+                  </Button>
                   
-                    <Button className="mx-4" variant="warning" value={post.id} onClick={toggleShowIconsWindowOpen}>
-                      <RxDotsHorizontal />
-                    </Button>
-                  
-                  
-
-               
-                
                 {isShowIconWindowOpen && 
                 <Row > 
                   <Col >
-                    <Button variant="warning" value={post.id} onClick={() => handleDelete(post.id)}>
+                    <Button variant="warning" size="sm" value={post.id} onClick={() => handleDelete(post.id)}>
                       <RiDeleteBin7Line />
                     </Button>
                   </Col>
                   <Col>
-                    <Button variant="warning" value={post.id} className="show-btn" onClick={toggleEditWindow}>
+                    <Button variant="warning" size="sm" value={post.id} className="show-btn" onClick={toggleEditWindow}>
                       <RiEditLine />
                     </Button> 
                   </Col>

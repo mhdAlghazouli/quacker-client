@@ -27,7 +27,7 @@ const FollowPost = ({post}) => {
   }
 
   return ( 
-    <Card key={post.id} className="mb-4" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}> 
+    <Card key={post.id} className="mb-5" style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}> 
               <Card.Body>
                 <Row>
                   <Col className="d-flex">
@@ -59,7 +59,7 @@ const FollowPost = ({post}) => {
                         <UnLikes post={post} setLikesCount={setLikesCount}/>
                       </Col>
                       <Col>
-                    <Button variant="warning" onClick={toggleCommentsWindowOpen}>
+                    <Button variant="warning" size="sm" onClick={toggleCommentsWindowOpen}>
                       <AiOutlineComment />
                     </Button>
                   </Col>
