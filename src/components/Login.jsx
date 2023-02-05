@@ -44,13 +44,14 @@ const Login = () => {
         email: userRes.data.email,
       })
       window.localStorage.setItem("jwt", userRes.data.jwt)
-      setLoading(false);
       navigate('/profile')
     }else{
       if(userRes.error === "incorrect password"){
+        setLoading(false);
         setPasswordError(userRes.error)
         setUserNameError("")
       }else{
+        setLoading(false);
         setUserNameError("this username is not registered")
         setPasswordError("")
       }
