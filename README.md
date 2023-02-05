@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+<h3>This project is split into two separate repositories: a Quacker repository and a Quacker-api repository. </h3>
+<h1 style="color: yellow">Quacker</h1>
+<h2>Quacker is a social media app that allows users to post updates and connect with friends.</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3>Front End</h3>
+<ul>The front-end is built using the following technologies:</ul>
 
-## Available Scripts
+<li>React</li>
+<li>React Bootstrap</li>
+<li>React Icons</li>
+<li>Moment</li>
+<li>React-Responsive</li>
+<h4> Profile page:</h4>
+<img src="https://user-images.githubusercontent.com/94564835/216842700-a9f057d2-0c21-4f6c-918b-12712cd20048.png"/>
+<h4> posts, comments and likes:</h4>
+<img src="https://user-images.githubusercontent.com/94564835/216842809-f07667c1-dd8b-44b6-a8b5-bcfe6a4c24fb.png" />
+<h4>Market place: </h4>
+<img src="https://user-images.githubusercontent.com/94564835/216842993-f17a3d4f-6e55-40ce-8ca8-2d8005b776cb.png" />
+<h4>Add a product to the market:</h4>
+<img src="https://user-images.githubusercontent.com/94564835/216843134-3e877d81-e3aa-4b3f-a585-a5b180b83fcc.png"/>
+<h4>All Products:</h4>
+<img src="https://user-images.githubusercontent.com/94564835/216843165-afef8666-3916-4eca-a54b-bb62e3aa4f7e.png" />
+<h4>delete my product:</h4>
+<img src="https://user-images.githubusercontent.com/94564835/216843191-60cdfdfa-605f-4d6d-87f1-03b1fec687e8.png"/>
+<h4>Mobile version:</h4>
+<img src="https://user-images.githubusercontent.com/94564835/216843321-667ba92a-1898-4fd1-9b60-f739fc06f089.png"/>
 
-In the project directory, you can run:
+<h3>Back End</h3>
+<a href="https://github.com/mhdAlghazouli/quacker-api">Quacker-api</a>
+<h3>The application is deployed at https://quacker.onrender.com/</h3>
 
-### `npm start`
+<h3>How to run the application locally?</h3>
+<ul>
+<li>Clone the repository to your local machine</li>
+<li>Navigate to the root of the project and run npm install to install the required dependencies</li>
+<li>Create a .env file in the root of the project with the following variables:
+<ul>
+<li>PORT=3000</li>
+<li>SECRET=YOUR_SECRET_KEY</li>
+<li>DB_URI=YOUR_DATABASE_URI</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [https://quacker-api.onrender.com](https://quacker-api.onrender.com) to view it in your browser.
+</li>
+<li>Start the application by running npm start in the root of the project</li>
+<li>Access the application in your browser at http://localhost:3000</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h3>Contribution</h3>
+<p>Feel free to contribute to the development of Quacker by opening a pull request or creating an issue.</p>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>License</h3>
+<p><b>Quacker</b> is open source and released under the MIT License.</p>
