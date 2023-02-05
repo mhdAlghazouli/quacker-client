@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
@@ -7,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/user.context';
 
 const Login = () => {
+  const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [id, setId] = useState("");
@@ -17,6 +19,7 @@ const Login = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     let user = {
       id: id,
       userName: userName,
@@ -40,9 +43,8 @@ const Login = () => {
         userName: userRes.data.userName,
         email: userRes.data.email,
       })
-      
-      alert("login successful");
       window.localStorage.setItem("jwt", userRes.data.jwt)
+      setLoading(false);
       navigate('/profile')
     }else{
       if(userRes.error === "incorrect password"){
@@ -75,9 +77,14 @@ const Login = () => {
               </Form.Group>
 
               <Button variant="warning" type="submit" onClick={(e) => handleSubmit(e)}>
-                Submit
+              {loading ? (
+                <Spinner animation="border" variant="secondary" size="sm" role="status">
+                  <span className="sr-only">Loading...</span>
+                </Spinner>
+              ) : <>Login</>}
               </Button>
             </Form>
+            
           </Card.Body>
         </Card>
       </Container>
