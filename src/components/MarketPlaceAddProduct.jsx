@@ -24,28 +24,33 @@ const MarketPlaceAddProduct = () => {
   async function handleSubmitProduct(e){
     e.preventDefault();
     
+    if(title === "" || image === "" || description === "" || price === "" || contact === ""){
+      alert("please fill all of the fields")
+    }else{
+      const formData = new FormData();
+      formData.append('title', title)
+      formData.append('image', image)
+      formData.append('description', description)
+      formData.append('price', price)
+      formData.append('contact', contact)
+      formData.append('userId', loginUser.id)
+  
+      const response = await fetch("https://quacker-api.onrender.com/products", {
+        method: "POST",
+        body: formData
+      });
+      const productRes = await response.json();
+      if(productRes){
+        setTitle("");
+        setImage("");
+        setDescription("");
+        setPrice(0);
+        setContact("");
+        navigate("/MarketPlaceAllProducts")
+      }
 
-    const formData = new FormData();
-    formData.append('title', title)
-    formData.append('image', image)
-    formData.append('description', description)
-    formData.append('price', price)
-    formData.append('contact', contact)
-    formData.append('userId', loginUser.id)
-
-    const response = await fetch("https://quacker-api.onrender.com/products", {
-      method: "POST",
-      body: formData
-    });
-    const productRes = await response.json();
-    if(productRes){
-      setTitle("");
-      setImage("");
-      setDescription("");
-      setPrice(0);
-      setContact("");
-      navigate("/MarketPlaceAllProducts")
     }
+
   } 
   return ( 
     <div>

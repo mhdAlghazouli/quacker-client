@@ -9,7 +9,9 @@ import { UserContext } from '../contexts/user.context';
 const Login = () => {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [id, setId] = useState("")
+  const [id, setId] = useState("");
+  const [userNameError, setUserNameError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const {setUser} = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -29,6 +31,7 @@ const Login = () => {
       body: JSON.stringify(user)
     });
     const userRes = await response.json();
+   
     if(userRes.status === "ok") {
       setUser({
         id: userRes.data.id, 
@@ -41,6 +44,14 @@ const Login = () => {
       alert("login successful");
       window.localStorage.setItem("jwt", userRes.data.jwt)
       navigate('/profile')
+    }else{
+      if(userRes.error === "incorrect password"){
+        setPasswordError(userRes.error)
+        setUserNameError("")
+      }else{
+        setUserNameError("this username is not registered")
+        setPasswordError("")
+      }
     }
   }
   
@@ -54,11 +65,13 @@ const Login = () => {
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Username</Form.Label>
                 <Form.Control type="text" placeholder="Enter username" onChange={(e) => setUserName(e.target.value)}/>
+                <p className="text-warning">{userNameError && userNameError}</p>
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="text" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)}/>
+                <Form.Control type="password" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)}/>
+                <p className="text-warning">{passwordError && passwordError}</p>
               </Form.Group>
 
               <Button variant="warning" type="submit" onClick={(e) => handleSubmit(e)}>

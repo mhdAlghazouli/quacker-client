@@ -10,7 +10,7 @@ import MarketPlace from './components/MarketPlace';
 import MarketPlaceAddProduct from './components/MarketPlaceAddProduct';
 import MarketPlaceAllProducts from './components/MarketPlaceAllProduct';
 import MarketPlaceMyProducts from './components/MarketPlaceMyProducts';
-import CellPhone from './components/CellPhone';
+import CellPhoneFollowing from './components/CellPhoneFollowing';
 import { UserContextProvider } from './contexts/user.context';
 
 
@@ -32,7 +32,7 @@ import { UserContextProvider } from './contexts/user.context';
               <Route path="/MarketPlaceAddProduct" element={<MarketPlaceAddProduct />}/>
               <Route path="/MarketPlaceAllProducts" element={<MarketPlaceAllProducts />}/>
               <Route path="/MarketPlaceMyProducts" element={<MarketPlaceMyProducts />}/>
-              <Route path="/cellphone" element={<CellPhone />}/>
+              <Route path="/following" element={<CellPhoneFollowing />} />
             </Switch>   
         </UserContextProvider>
     </div>

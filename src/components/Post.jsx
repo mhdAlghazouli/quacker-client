@@ -92,8 +92,8 @@ async function handleEdit(){
           <Card.Body>
             <Row >
             
-                <Col md="7" className="d-flex">
-                  <Image src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg" fluid style={{"width": "10%","borderRadius": "50%" }} />
+                <Col style={{"width": "50%"}} className="d-flex justify-content-start align-items-center">
+                  <Image src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg" fluid style={{"width": "20%","borderRadius": "50%" }} />
                   <Card.Text className="d-flex px-3" style={{"textAlign": "start", "color": "#777"}}>
                     {loginUser.userName}
                     <br />
@@ -101,15 +101,15 @@ async function handleEdit(){
                   </Card.Text>
                 </Col>
 
-                <Col md="5" className="d-flex justify-content-end align-items-start ">
-                  <Button className="mx-4" size="sm" variant="warning" value={post.id} onClick={toggleShowIconsWindowOpen}>
+                <Col style={{"width": "50%"}} className="d-flex justify-content-end align-items-center">
+                  <Button  size="sm" variant="warning" value={post.id} onClick={toggleShowIconsWindowOpen}>
                     <RxDotsHorizontal />
                   </Button>
                   
                 {isShowIconWindowOpen && 
                 <Row > 
-                  <Col >
-                    <Button variant="warning" size="sm" value={post.id} onClick={() => handleDelete(post.id)}>
+                  <Col style={{"marginLeft":"27px"}}>
+                    <Button  variant="warning" size="sm" value={post.id} onClick={() => handleDelete(post.id)}>
                       <RiDeleteBin7Line />
                     </Button>
                   </Col>

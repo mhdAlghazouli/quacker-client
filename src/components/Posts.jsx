@@ -16,26 +16,29 @@ const Posts = ({ data,setPostsData }) => {
   //post a quack fetch
   async function handleSubmitPost(e){
     e.preventDefault();
-
-    const formData = new FormData();
-    formData.append('image', image)
-    formData.append('textContent', textContent)
-    formData.append('userId', data.data.id)
-
-    const response = await fetch("https://quacker-api.onrender.com/posts", {
-      method: "POST",
-      
-      
-      body: formData
-      
-    });
-    const postRes = await response.json();
-    if(postRes){
-      setPostsData((prevState)=>[postRes,...prevState ])
-      setTextContent('')
+    if(image === "" && textContent === ""){
+      alert("you can not post an empty post")
+    }else{
+      const formData = new FormData();
+      formData.append('image', image)
+      formData.append('textContent', textContent)
+      formData.append('userId', data.data.id)
+      const response = await fetch("https://quacker-api.onrender.com/posts", {
+        method: "POST",
+        
+        
+        body: formData
+        
+      });
+      const postRes = await response.json();
+      if(postRes){
+        setPostsData((prevState)=>[postRes,...prevState ])
+        setTextContent('')
+      }
+      document.getElementById("content-div").style.display = "none";
+      document.getElementById("show-content-btn").style.display = "block";
     }
-    document.getElementById("content-div").style.display = "none";
-    document.getElementById("show-content-btn").style.display = "block";
+
   } 
 
   return ( 

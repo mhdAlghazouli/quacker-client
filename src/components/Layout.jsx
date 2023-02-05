@@ -34,13 +34,13 @@ const Layout = () => {
             {localStorage.getItem("jwt") ? 
             <Col className="d-flex ">
               
-                  <Col md="10" className="d-flex justify-content-center align-items-center">
+                  <Col md="10" className="d-flex justify-content-center align-items-center mx-4">
                     <SearchDucks  />
                   </Col >
             
             
-                  <Col className="d-flex justify-content-end align-items-center">
-                  <Image className="mx-4" src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg"  style={{"width": "20%","borderRadius": "50%" }} />
+                  <Col className="d-flex justify-content-end align-items-center ">
+                  <Image  src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg"  style={{"width": "25%","borderRadius": "50%"}} />
                     <b className="text-warning">{loginUser && loginUser.userName}</b>
                   </Col>
            

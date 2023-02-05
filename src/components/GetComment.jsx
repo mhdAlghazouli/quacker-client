@@ -68,13 +68,13 @@ const GetComment = ({ commentData, setCommentData, setCommentsCount }) => {
 
             </Col>
             <Col className='d-flex justify-content-end px-4 py-2'>
-              {comment.Post && comment.Post.userId === loginUser.id ? <Button className="mx-2" variant='warning'value={comment.id} onClick={() => handleDelete(comment.id)}>
+              {comment.Post && comment.Post.userId === loginUser.id ? <Button className="mx-2" size="sm" variant='warning'value={comment.id} onClick={() => handleDelete(comment.id)}>
                 <RiDeleteBin7Line />
-              </Button> : comment.userId === loginUser.id ? <Button className="mx-2" variant='warning'value={comment.id} onClick={() => handleDelete(comment.id)}>
+              </Button> : comment.userId === loginUser.id ? <Button className="mx-2" size="sm" variant='warning'value={comment.id} onClick={() => handleDelete(comment.id)}>
                 <RiDeleteBin7Line />
               </Button> : null}
               
-              {comment.userId === loginUser.id ? <Button variant='warning'value={comment.id} onClick={toggleEditWindow}>
+              {comment.userId === loginUser.id ? <Button variant='warning' size="sm" value={comment.id} onClick={toggleEditWindow}>
                 <RiEditLine />
               </Button>: null}
               

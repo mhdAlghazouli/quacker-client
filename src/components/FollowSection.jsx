@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
 import Nav from 'react-bootstrap/Nav';
-import { BrowserRouter as Router, Route, Routes as Switch, Link  } from 'react-router-dom';
+import {  Link  } from 'react-router-dom';
 
 const FollowSection = ({ followSectionData }) => {
 
