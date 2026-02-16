@@ -93,7 +93,7 @@ async function handleEdit(){
             <Row >
             
                 <Col style={{"width": "50%"}} className="d-flex justify-content-start align-items-center">
-                  <Image src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg" fluid style={{"width": "20%","borderRadius": "50%" }} />
+                  <Image src="/flat-duck-wink-head-png-illustration-5698265.svg" fluid style={{"width": "20%","borderRadius": "50%" }} />
                   <Card.Text className="d-flex px-3" style={{"textAlign": "start", "color": "#777"}}>
                     {loginUser.userName}
                     <br />
