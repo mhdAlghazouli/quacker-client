@@ -45,7 +45,7 @@ const CellPhoneFollowing = () => {
         <Nav.Link as={Link} to={`/profile/${follower.followedId}`} key={follower.id}>
           <Card className="mb-2 " style={{"width": "100%", "boxShadow": "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)"}}>
             <Row className="d-flex align-items-center">
-              <Col><Image src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg" fluid style={{"width": "20%","borderRadius": "50%" }} /></Col>
+              <Col><Image src="/flat-duck-wink-head-png-illustration-5698265.svg" fluid style={{"width": "20%","borderRadius": "50%" }} /></Col>
               <Col style={{"color": "#777"}}>{follower.followed.userName}</Col>
             </Row>
           </Card>
