@@ -62,7 +62,7 @@ const GetComment = ({ commentData, setCommentData, setCommentsCount }) => {
         <Card className="mt-2" key={comment.id}>
           <Row className='d-flex'>
             <Col className='d-flex justify-content-start align-items-center py-2' style={{"color": "#777"}}>
-              <Image src="https://icon2.cleanpng.com/20180208/zge/kisspng-duck-cartoon-small-yellow-duck-cartoon-vector-5a7cef146cd675.8736460015181371084458.jpg" fluid style={{"width": "10%","borderRadius": "50%" }} className="mx-2"/>
+              <Image src="/flat-duck-wink-head-png-illustration-5698265.svg" fluid style={{"width": "10%","borderRadius": "50%" }} className="mx-2"/>
         
               {comment.User ? comment.User.userName : loginUser.userName}
 
