@@ -60,7 +60,7 @@ const Signup = () => {
           setSignupErrorsEmail(resUser.errors.email)
         
       }else{
-        navigate('./')
+        navigate('/')
         
       }
       
